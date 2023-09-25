@@ -209,7 +209,7 @@ what will be changed.
 We can output this changeset ie. "plan" to be passed to an apply, but often you can just ignore
 outputting.
 
-### Terraform Fmt
+#### Terraform Fmt
 
 Running this command in the directory containing your Terraform configuration files will automatically format all the files in that directory
 and its subdirectories according to the formatting rules defined by Terraform.
@@ -223,6 +223,12 @@ execute by terraform. Apply should prompt yes or no.
 
 If we want to automatically approve an apply we can
 provide the auto approve flag eg. `terraform apply --auto-approve`
+
+#### Terraform Destroy
+
+`terraform destroy`
+This will destroy resources.
+You have to be careful when you using terraform destroy, sometimes it replaced your infrastructure.
 
 ### Terraform Lock Files
 
