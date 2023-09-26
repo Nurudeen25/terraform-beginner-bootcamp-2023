@@ -75,7 +75,7 @@ When executing the bash script we can use the `./` shorthand notiation to execut
 
 eg. `./bin/install_terraform_cli`
 
-if we are uasing a script in .gitpod.yml we need to point the script to a program to interpret it.
+if we are using a script in .gitpod.yml we need to point the script to a program to interpret it.
 
 eg. `source ./bin/install_terraform_cli`
 
@@ -284,3 +284,21 @@ Provide the following code (replace your token in the file):
 ```
 
 I have automated this workaround with the following bash script[bin/generate_tfrc_credentials](bin/generate_tfrc_credentials)
+
+I do set up Environment Variables such as Terraform to TF
+I had to set it from the bash profile with this command 
+```
+open ~/.bash_profile
+```
+
+Once its open you can add this command at the bottom of the file 
+
+```
+alias tf="terraform"
+```
+
+I have to write a bash script that will automatically set up the alias tf to my enviroment, whenever i start my gitpod workspace environment.
+
+if we are using a script in .gitpod.yml we need to point the script to a program to interpret it.
+
+eg. `source ./bin/set_tf_alias`
