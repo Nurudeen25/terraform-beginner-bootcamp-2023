@@ -8,12 +8,12 @@
   * [Shebang Considerations](#shebang-considerations)
 - [Execution Considerations](#execution-considerations)
     + [Linux Permission Considerations](#linux-permission-considerations)
-  * [Github Lifecycle (Before, Init, Command)](#github-lifecycle--before--init--command-)
-  * [Working Env Vars](#working-env-vars)
+- [Gitpod Lifecycle - Before, Init, Command](#gitpod-lifecycle---before--init--command)
+- [Working Env Vars](#working-env-vars)
   * [Setting and Unsetting Env Vars](#setting-and-unsetting-env-vars)
-- [Printing Vars](#printing-vars)
+  * [Printing Vars](#printing-vars)
   * [Scoping of Env Vars](#scoping-of-env-vars)
-    + [Persisting Env Vars in Gitpod](#persisting-env-vars-in-gitpod)
+  * [Persisting Env Vars in Gitpod](#persisting-env-vars-in-gitpod)
   * [AWS CLI Installation](#aws-cli-installation)
 - [Terraform Basics](#terraform-basics)
   * [Terraform Registry](#terraform-registry)
@@ -27,6 +27,8 @@
   * [Terraform State Files](#terraform-state-files)
   * [Terraform Directory](#terraform-directory)
 - [Issues with Terraform Cloud Login and Gitpod Workspace](#issues-with-terraform-cloud-login-and-gitpod-workspace)
+
+
 
 ## Semantic Versioning 
 
@@ -123,13 +125,13 @@ chmod 744 ./bin/install_terraform_cli
 
 https://en.wikipedia.org/wiki/Chmod
 
-### Github Lifecycle (Before, Init, Command)
+## Gitpod Lifecycle - Before, Init, Command
 
 We need to be careful when using Init because it will not rerun if we restart an existing workspace.
 
 https://www.gitpod.io/docs/configure/workspaces/tasks
 
-### Working Env Vars
+## Working Env Vars
 
 We can list our all Env Variables (Env Vars) Usinging the `env` command
 
@@ -155,7 +157,7 @@ HELLO='world'
 echo $HELLO
 ```
 
-## Printing Vars
+### Printing Vars
 
 We can print an env var using echo eg. `echo $HELLO`
 
@@ -167,7 +169,7 @@ have set in another window.
 If you want to Env Vars to persist across all future bash teminals that are open you 
 need to set env vars in your bash profile. eg. `.bash_profile`
 
-#### Persisting Env Vars in Gitpod
+### Persisting Env Vars in Gitpod
 
 We can persist env vars into gitpod by storing them in Gitpod Secrets Storgae.
 
